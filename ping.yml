@@ -1,0 +1,9 @@
+---
+# ping to localhost
+
+- hosts: local
+  connection: local
+  remote_user: root
+  tasks:
+   - name: ping to server
+     ping:
