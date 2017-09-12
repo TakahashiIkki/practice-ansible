@@ -1,0 +1,8 @@
+---
+- name: install some software
+  yum: name={{ item }} state=installed
+  with_items:
+   - curl
+   - wget
+   - vim
+   - unzip
