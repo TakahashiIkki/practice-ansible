@@ -1,0 +1,16 @@
+---
+- name: wget postgresql96
+  get_url: 
+    url: https://download.postgresql.org/pub/repos/yum/9.6/redhat/rhel-7-x86_64/pgdg-centos96-9.6-3.noarch.rpm
+    dest: /usr/local/src
+
+- name: install postgresql 96 rpm
+  yum: name=/usr/local/src/pgdg-centos96-9.6-3.noarch.rpm state=installed
+
+- name: install postgres96
+  yum: name={{ item }} state=installed
+  with_items:
+    - postgresql96-server
+    - postgresql96-devel
+    - postgresql96-contrib
+   

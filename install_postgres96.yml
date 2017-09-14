@@ -1,0 +1,8 @@
+---
+- name: install postgresql96
+  hosts: local
+  connection: local
+  become: yes
+  become_method: sudo
+  roles: 
+   - postgres96
