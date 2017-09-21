@@ -1,0 +1,8 @@
+---
+- name: install elasticsearch by role
+  hosts: local
+  connection: local
+  become: yes
+  become_method: sudo
+  roles:
+    - elastic560

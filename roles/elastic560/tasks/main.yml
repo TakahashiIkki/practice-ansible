@@ -1,0 +1,8 @@
+---
+- name: wget elastic
+  get_url: 
+    url: https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-5.6.0.tar.gz
+    dest: /usr/local/src
+
+- name: unarchive source files
+  unarchive: src=/usr/local/src/elasticsearch-5.6.0.tar.gz dest=/usr/local/src/

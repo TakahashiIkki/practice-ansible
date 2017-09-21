@@ -6,3 +6,6 @@
    - wget
    - vim
    - unzip
+   - openssl-devel
+   - readline-devel
+   - zlib-devel
